@@ -1,9 +1,7 @@
 # 🌐 Intro to Web Development 🚀
 
-- **Name:** [Your Name Here]
+- **Name:** Justin Teng
 - **Instructor:** Mr. Gullo
-- **Course Authors:** Mary Kiang, Atiyah Conry
-- **Date of Completion:** [Date Here]
 
 ---
 

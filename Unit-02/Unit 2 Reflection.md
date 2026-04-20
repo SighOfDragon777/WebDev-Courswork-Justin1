@@ -1,3 +1,3 @@
 # Unit 2 Reflection
-
-[Reflect on your journey here]
+In Unit 2, I learned that design is everywhere, not just on websites, and that there's a science behind good website design. I also learned about design thinking as a process and how storytelling helps create better user experiences. It is hard to move away from thinking design is just about colors and fonts to solving problems. Also, we looked at websites I use daily and ask why they work the way they do. This unit recreated me seeing design as a thinking tool.
+<img width="212" height="167" alt="image" src="https://github.com/user-attachments/assets/920d2285-036c-4e4c-9e2f-453044a03930" />

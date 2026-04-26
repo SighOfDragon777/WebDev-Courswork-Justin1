@@ -1,3 +1,3 @@
 # Unit 3 Reflection
 
-[Reflect on your journey here]
+In Unit 3, I learned how to work on a real website project for a client. This unit focused less on technical skills and more on understanding what the client actually needs. The key steps were interviewing the client, defining the problem, brainstorming ideas, and then building the site. Looking at sample client profiles like Kai's helped me see that different clients have different goals and interests. Asking good questions during the interview was essential to really understanding the project. Overall, this unit showed me that web development isn't just about writing code—it's about solving problems for real people. I feel more prepared to take on client projects in the future.

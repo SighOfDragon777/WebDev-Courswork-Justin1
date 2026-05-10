@@ -1,3 +1,3 @@
 # Unit 7 Reflection
 
-[Reflect on your journey here]
+Unit 7 brought together the technical skills from previous units and applied them to a meaningful real-world context: the United Nations’ Global Goals. Through exploring the SDGs and applying design thinking, I learned how web development can serve a larger purpose beyond aesthetics or basic functionality—it can inform, inspire, and mobilize action around critical global issues like poverty, climate change, and inequality. The process of moving from research to a communication-focused code challenge reinforced the importance of user-centered design, iterative feedback, and intentional messaging. This unit helped me see coding not just as a technical exercise, but as a tool for storytelling, advocacy, and solving real problems with purpose.

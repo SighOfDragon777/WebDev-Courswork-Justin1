@@ -1,1 +1,413 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG Community · Act for Future</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            background: #fafbf8;
+            color: #1a2e2a;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #e2e8e5;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(4px);
+            z-index: 10;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo h2 {
+            color: #1f6e5c;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .logo p {
+            font-size: 0.75rem;
+            color: #5c7a72;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c5546;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #0f8b70;
+        }
+
+        .hero {
+            background: #e6f3ef;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            color: #185c4b;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #2a5a4b;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1f6e5c;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .btn:hover {
+            background: #0f5949;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 48px 0 24px;
+        }
+
+        .intro h3 {
+            font-size: 1.8rem;
+            color: #1f423a;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #4a6a60;
+        }
+
+        .sdg-section {
+            padding: 20px 0 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e5a4a;
+            margin-bottom: 32px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: 0.2s;
+            border: 1px solid #ddebe5;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(30, 110, 92, 0.1);
+            border-color: #bdd9cf;
+        }
+
+        .number {
+            display: inline-block;
+            background: #e0f0ea;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #1a6e5a;
+            margin-bottom: 12px;
+        }
+
+        .card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #1e4e41;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #516e64;
+            margin-bottom: 16px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background: #f4f9f6;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            color: #2e7b66;
+        }
+
+        .action {
+            background: #fff7ed;
+            padding: 48px 0;
+            text-align: center;
+            border-top: 1px solid #f0e2ce;
+            border-bottom: 1px solid #f0e2ce;
+        }
+
+        .action h3 {
+            font-size: 1.8rem;
+            color: #b46b3a;
+            margin-bottom: 12px;
+        }
+
+        .action-buttons {
+            margin-top: 24px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #b46b3a;
+            color: #b46b3a;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .btn-outline:hover {
+            background: #f5e5d4;
+        }
+
+        footer {
+            background: #1e2e2a;
+            color: #cddfd9;
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-top: 8px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <h2>🌍 SDG Hub</h2>
+                <p>community for change</p>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Goals</a>
+                <a href="#">Actions</a>
+                <a href="#">Join</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>17 Sustainable Development Goals</h1>
+            <p>From ending poverty to climate action · Every step counts</p>
+            <a href="#" class="btn">Join the community</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="intro">
+            <h3>🌱 Local action, global impact</h3>
+            <p>The core of the UN 2030 Agenda. Students, creators, and neighbors — everyone belongs here.</p>
+        </div>
+    </div>
+
+    <section class="sdg-section">
+        <div class="container">
+            <h2 class="section-title">📌 17 goals · one future</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="number">Goal 1</span>
+                    <h4>No Poverty</h4>
+                    <p>End poverty in all its forms everywhere.</p>
+                    <span class="tag">#EndPoverty</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 2</span>
+                    <h4>Zero Hunger</h4>
+                    <p>End hunger, achieve food security.</p>
+                    <span class="tag">#FoodJustice</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 3</span>
+                    <h4>Good Health & Well-being</h4>
+                    <p>Ensure healthy lives and promote well-being.</p>
+                    <span class="tag">#HealthForAll</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 4</span>
+                    <h4>Quality Education</h4>
+                    <p>Inclusive and equitable quality education.</p>
+                    <span class="tag">#EducationFirst</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 5</span>
+                    <h4>Gender Equality</h4>
+                    <p>Achieve gender equality and empower all women.</p>
+                    <span class="tag">#EqualRights</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 6</span>
+                    <h4>Clean Water & Sanitation</h4>
+                    <p>Ensure access to water and sanitation for all.</p>
+                    <span class="tag">#WaterIsLife</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 7</span>
+                    <h4>Affordable Clean Energy</h4>
+                    <p>Access to affordable, reliable energy.</p>
+                    <span class="tag">#CleanEnergy</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 8</span>
+                    <h4>Decent Work & Growth</h4>
+                    <p>Promote inclusive economic growth and decent work.</p>
+                    <span class="tag">#FairWork</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 9</span>
+                    <h4>Industry, Innovation & Infrastructure</h4>
+                    <p>Build resilient infrastructure, foster innovation.</p>
+                    <span class="tag">#SustainableIndustry</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 10</span>
+                    <h4>Reduced Inequalities</h4>
+                    <p>Reduce inequality within and among countries.</p>
+                    <span class="tag">#EqualOpportunity</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 11</span>
+                    <h4>Sustainable Cities & Communities</h4>
+                    <p>Make cities inclusive, safe, resilient.</p>
+                    <span class="tag">#GreenCities</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 12</span>
+                    <h4>Responsible Consumption & Production</h4>
+                    <p>Ensure sustainable consumption patterns.</p>
+                    <span class="tag">#ZeroWaste</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 13</span>
+                    <h4>Climate Action</h4>
+                    <p>Take urgent action to combat climate change.</p>
+                    <span class="tag">#ActOnClimate</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 14</span>
+                    <h4>Life Below Water</h4>
+                    <p>Conserve and sustainably use the oceans.</p>
+                    <span class="tag">#SaveOurOcean</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 15</span>
+                    <h4>Life on Land</h4>
+                    <p>Protect and restore terrestrial ecosystems.</p>
+                    <span class="tag">#Biodiversity</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 16</span>
+                    <h4>Peace, Justice & Strong Institutions</h4>
+                    <p>Promote peaceful and inclusive societies.</p>
+                    <span class="tag">#JusticeForAll</span>
+                </div>
+                <div class="card">
+                    <span class="number">Goal 17</span>
+                    <h4>Partnerships for the Goals</h4>
+                    <p>Strengthen global partnerships for sustainable development.</p>
+                    <span class="tag">#TogetherWeCan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="action">
+        <div class="container">
+            <h3>🤝 Start where you stand</h3>
+            <p>Share your idea, join a local project, or simply learn more. Every small act creates ripples.</p>
+            <div class="action-buttons">
+                <a href="#" class="btn">🌿 Start an initiative</a>
+                <a href="#" class="btn-outline">📢 Join a discussion</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>🌐 United for a sustainable future — based on the UN 17 SDGs</p>
+        <p>© 2025 SDG Community Hub | Act local, impact global</p>
+    </div>
+</footer>
+
+</body>
+</html>
+```

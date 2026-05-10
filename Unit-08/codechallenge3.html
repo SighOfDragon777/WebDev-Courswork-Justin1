@@ -1,1 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #fefefe;
+            color: #1a3a2e;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .flex-between {
+            justify-content: space-between;
+        }
+
+        .flex-center {
+            align-items: center;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .gap-1 {
+            gap: 8px;
+        }
+
+        .gap-2 {
+            gap: 16px;
+        }
+
+        .gap-3 {
+            gap: 24px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .mb-1 {
+            margin-bottom: 8px;
+        }
+
+        .mb-2 {
+            margin-bottom: 16px;
+        }
+
+        .mb-3 {
+            margin-bottom: 24px;
+        }
+
+        .mt-2 {
+            margin-top: 16px;
+        }
+
+        .mt-3 {
+            margin-top: 24px;
+        }
+
+        .p-2 {
+            padding: 16px;
+        }
+
+        .p-3 {
+            padding: 24px;
+        }
+
+        .border {
+            border: 1px solid #dcebe5;
+        }
+
+        .rounded {
+            border-radius: 20px;
+        }
+
+        .bg-white {
+            background: white;
+        }
+
+        .bg-light {
+            background: #e6f3ef;
+        }
+
+        .bg-warm {
+            background: #fff5e6;
+        }
+
+        .bg-dark {
+            background: #1a2e28;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .fixed-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e0e8e4;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a6e58;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #2a5a4a;
+            margin-left: 24px;
+        }
+
+        .nav a:hover {
+            color: #0f8b70;
+        }
+
+        .hero {
+            padding: 48px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: #155a48;
+        }
+
+        .btn {
+            background: #1a6e58;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #c26a2e;
+            color: #c26a2e;
+            padding: 8px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .number {
+            background: #e6f0ec;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #1a6e58;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin: 12px 0 6px;
+            color: #1e5543;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: #5a7b6e;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #c26a2e;
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            padding: 30px 0;
+            font-size: 0.8rem;
+            color: #bdd3ca;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .social-links a {
+            color: #bdd3ca;
+            text-decoration: none;
+        }
+
+        .chat-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #1a6e58;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .nav a {
+                margin-left: 12px;
+            }
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="sticky">
+    <div class="container">
+        <div class="flex flex-between flex-center flex-wrap">
+            <div class="logo relative">
+                🌍 SDG Community
+                <span class="badge">ACT</span>
+            </div>
+            <div class="nav">
+                <a href="#">Goals</a>
+                <a href="#">Actions</a>
+                <a href="#">Join</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="hero bg-light text-center">
+    <div class="container">
+        <h1 class="mb-2">17 Sustainable Development Goals</h1>
+        <p class="mb-3">Local action. Global impact.</p>
+        <a href="#" class="btn inline-block">Get involved</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="text-center mt-3 mb-2">
+        <h2 class="mb-2">The 2030 Agenda</h2>
+        <p>From ending poverty to protecting the planet — everyone has a role.</p>
+    </div>
+
+    <div class="goals-grid">
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 1</span>
+            <h3>No Poverty</h3>
+            <p>End poverty in all its forms everywhere.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 2</span>
+            <h3>Zero Hunger</h3>
+            <p>End hunger, achieve food security.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 3</span>
+            <h3>Good Health</h3>
+            <p>Healthy lives and well-being for all.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 4</span>
+            <h3>Quality Education</h3>
+            <p>Inclusive and equitable education.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 5</span>
+            <h3>Gender Equality</h3>
+            <p>Empower all women and girls.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 6</span>
+            <h3>Clean Water</h3>
+            <p>Water and sanitation for everyone.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 7</span>
+            <h3>Clean Energy</h3>
+            <p>Affordable, sustainable energy.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 8</span>
+            <h3>Decent Work</h3>
+            <p>Economic growth and fair jobs.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 9</span>
+            <h3>Industry & Innovation</h3>
+            <p>Resilient infrastructure.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 10</span>
+            <h3>Reduced Inequalities</h3>
+            <p>Reduce inequality within countries.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 11</span>
+            <h3>Sustainable Cities</h3>
+            <p>Safe, inclusive communities.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 12</span>
+            <h3>Responsible Consumption</h3>
+            <p>Sustainable production patterns.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 13</span>
+            <h3>Climate Action</h3>
+            <p>Combat climate change.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 14</span>
+            <h3>Life Below Water</h3>
+            <p>Protect oceans and marine life.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 15</span>
+            <h3>Life on Land</h3>
+            <p>Protect forests and biodiversity.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 16</span>
+            <h3>Peace & Justice</h3>
+            <p>Strong, inclusive institutions.</p>
+        </div>
+        <div class="card bg-white border rounded p-2">
+            <span class="number">Goal 17</span>
+            <h3>Partnerships</h3>
+            <p>Global cooperation for the goals.</p>
+        </div>
+    </div>
+</div>
+
+<div class="action bg-warm text-center">
+    <div class="container">
+        <h2 class="mb-2">Start where you are</h2>
+        <p class="mb-3">Join thousands taking small steps toward big change.</p>
+        <div class="action-buttons">
+            <a href="#" class="btn">Join community</a>
+            <a href="#" class="btn-outline">Learn more</a>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-center">
+    <div class="container">
+        <p>🌱 Based on the UN Sustainable Development Goals</p>
+        <p class="mt-2">SDG Community Hub — Act local, change global</p>
+        <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
+</footer>
+
+<div class="fixed-chat">
+    <a href="#" class="chat-btn">💬</a>
+</div>
+
+</body>
+</html>

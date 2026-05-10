@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive: SDG Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f4f7f5;
+            color: #1a3a2e;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background: #1a6e58;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .card {
+            flex: 1 1 calc(33.333% - 20px);
+            margin: 10px;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+            color: #1a6e58;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #c26a2e;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #1a2e28;
+            color: #bdd3ca;
+            text-align: center;
+            padding: 24px 0;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
+            .container {
+                width: 95%;
+            }
+            .logo {
+                font-size: 1.3rem;
+            }
+            .btn {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">🌍 SDG Community</div>
+        <div class="tagline">Responsive — fluid grid, flexible images</div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <img src="https://placehold.co/400x200/e6f0ec/1a6e58?text=No+Poverty" alt="SDG 1">
+            <h3>Goal 1: No Poverty</h3>
+            <p>End poverty in all its forms everywhere. Economic justice for all.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="card">
+            <img src="https://placehold.co/400x200/e6f0ec/1a6e58?text=Zero+Hunger" alt="SDG 2">
+            <h3>Goal 2: Zero Hunger</h3>
+            <p>End hunger, achieve food security and improved nutrition.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="card">
+            <img src="https://placehold.co/400x200/e6f0ec/1a6e58?text=Climate+Action" alt="SDG 13">
+            <h3>Goal 13: Climate Action</h3>
+            <p>Take urgent action to combat climate change and its impacts.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="card">
+            <img src="https://placehold.co/400x200/e6f0ec/1a6e58?text=Quality+Education" alt="SDG 4">
+            <h3>Goal 4: Quality Education</h3>
+            <p>Inclusive and equitable quality education for all.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="card">
+            <img src="https://placehold.co/400x200/e6f0ec/1a6e58?text=Gender+Equality" alt="SDG 5">
+            <h3>Goal 5: Gender Equality</h3>
+            <p>Empower all women and girls for a fair future.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+        <div class="card">
+            <img src="https://placehold.co/400x200/e6f0ec/1a6e58?text=Life+on+Land" alt="SDG 15">
+            <h3>Goal 15: Life on Land</h3>
+            <p>Protect forests, fight desertification, halt biodiversity loss.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>🌱 Responsive Design — Fluid grid, flexible images, media queries</p>
+    </div>
+</footer>
+
+</body>
+</html>

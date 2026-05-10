@@ -1,3 +1,3 @@
 # Unit 8 Reflection
 
-[Reflect on your journey here]
+Unit 8 marked a significant step forward in my ability to create polished, professional, and device-friendly websites. Learning to style with div and class gave me greater control and reusability across my code, while mastering the box model and positioning helped me understand exactly how elements occupy space and interact on a page. The display property lessons clarified how to organize content flexibly and efficiently, and the comparison between responsive and adaptive design was especially valuable—it taught me to think strategically about user experience across different screen sizes. The code challenges throughout the unit pushed me to apply these concepts immediately, reinforcing my confidence in building layouts that are not only visually structured but also genuinely responsive.

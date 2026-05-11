@@ -1,3 +1,4 @@
 # Unit 4 Reflection
 
 In Unit 4, I moved beyond basic HTML and learned how to make webpages more structured, visual, and accessible. I practiced using different types of HTML lists (ordered, unordered, nested) to organize content clearly. I also learned how to embed images using relative and absolute paths, and how to control image sizing. The lessons on accessibility were especially important—I now understand how small changes, like adding proper attributes, can make a website usable for more people. As this unit showed me that good HTML isn't just about getting content on the page, it's about organizing it well, making it accessible, and paying attention to details that improve the user experience.
+<img width="208" height="461" alt="image" src="https://github.com/user-attachments/assets/41b574b1-d657-45d0-9dcf-f43a6187a274" />

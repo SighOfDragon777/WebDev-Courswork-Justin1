@@ -1,3 +1,5 @@
 # Unit 9 Reflection
 
-[Reflect on your journey here]
+In this unit, I learned what JavaScript is and how it can be used to create more interactive and dynamic websites. Before this, I thought HTML and CSS were enough to build a complete website. Now I understand that JavaScript is the tool that brings a webpage to life by responding to user actions.
+One of the most important skills I learned was how to use JavaScript to access HTML elements and their attributes on a web page. I also practiced using JavaScript to change the text (innerHTML) of an HTML element. This was a key moment for me because it showed how JavaScript and HTML work together. Instead of having fixed content, a webpage can now update itself based on what the user does.
+I repeated these concepts several times, which helped me remember the syntax and the logic behind them. Accessing elements and changing their content feels like the foundation of almost any interactive feature on the web. While I still need more practice to feel completely confident, I now have a clear starting point. This unit gave me the basic tools I need to move forward and learn more advanced JavaScript topics in the future.
